@@ -1,0 +1,40 @@
+@import "../../components/theme-settings";
+
+.list {
+  @media #{$small} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media #{$medium} {
+    display: initial;
+  }
+
+  .link {
+    margin-bottom: 1rem;
+
+    @media #{$small} {
+      width: 30%;
+    }
+
+    @media #{$medium} {
+      width: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-tertiary;
+      font-size: 1.25rem;
+
+      &:hover {        
+        color: $color-white;
+      }
+
+      &.active {
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+  }
+}

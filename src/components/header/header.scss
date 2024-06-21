@@ -1,0 +1,35 @@
+@import "../../components/theme-settings";
+
+header {
+  background: $color-primary;
+  margin: 0;
+  padding: .5rem 0;
+  color: $color-primary;
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .logo {
+    margin-top: .4rem;
+    color: $color-secondary;
+
+    > svg {
+      height: 3rem;
+    }
+  }
+
+  h1 {
+    text-transform: lowercase;
+    color: $color-white;
+    
+    strong {
+      font-weight: 700;
+    }
+  }
+}

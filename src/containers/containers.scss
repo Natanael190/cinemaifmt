@@ -1,0 +1,106 @@
+@import "../components/theme-settings";
+
+.catalog-container {
+  background: $color-black;  
+  padding: 0;
+
+  @media #{$small} {
+    display: flex;    
+    flex-grow: 1;
+  }
+
+  @media #{$medium} {
+    padding: 1.5rem 0;
+  }
+
+  .container {
+    padding: 0;    
+
+    .sidebar {
+      width: 100%;      
+      max-height: 30rem;
+      overflow: auto;
+      padding: 1.5rem;
+
+      @media #{$medium} {
+        width: 18rem;
+        flex-shrink: 0;
+        max-height: 50.25rem;
+        overflow: auto;
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+
+      @media #{$medium} {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        padding: 0 1.5rem;
+      }
+
+      .movie-content {
+        position: relative;   
+        
+        @media #{$medium} {
+          flex-grow: 1;
+        }
+
+        &::after {     
+          @media #{$medium} {
+            content: '';             
+            position: absolute;
+            bottom: 0;
+            right: 35%;
+            background: linear-gradient(to left, #000000 0%, rgba(0, 0, 0, 0) 100%);
+            width: 40%;
+            height: 100%;
+            z-index: 1;
+          }
+        }
+
+        .movie-poster {
+          width: 100%;
+          display: block;          
+
+          @media #{$medium} {
+            width: 65%;
+          }
+        }
+
+        .movie-details {
+          background: rgba(100, 165, 110, .90);
+          padding: 2rem;
+          color: $color-black;
+          z-index: 2;
+
+          @media #{$small} {
+            position: absolute;
+            bottom: 4rem;
+            right: 10%;
+            width: 60%;
+            padding: 2rem;
+            color: $color-black;
+            z-index: 2;
+          }
+
+          h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+          }
+
+          h4 {
+            font-size: 1.75rem;
+          }
+
+          p {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}
